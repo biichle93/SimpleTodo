@@ -8,10 +8,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 // BRIDGE THAT TELLS RECYCLERVIEW HOW TO DISPLAY DATA WE SUPPLY IT
-class TaskItemAdapter(val listOfItems: List<String>, val longClickListener: OnLongClickListener) : RecyclerView.Adapter<TaskItemAdapter.ViewHolder>() {
+class TaskItemAdapter(val listOfItems: List<String>,
+                      val longClickListener: OnLongClickListener,
+                      val onClickListener: OnClickListener) : RecyclerView.Adapter<TaskItemAdapter.ViewHolder>() {
 
     interface OnLongClickListener{
         fun onItemLongClicked(position: Int)
+    }
+    interface OnClickListener{
+        fun onItemClicked(position: Int)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -23,6 +28,9 @@ class TaskItemAdapter(val listOfItems: List<String>, val longClickListener: OnLo
                 //Log.i("Michael", "Long clicked on item:$adapterPosition")
                 longClickListener.onItemLongClicked(adapterPosition)
                 true
+            }
+            itemView.setOnClickListener{
+                onClickListener.onItemClicked(adapterPosition)
             }
         }
     }
