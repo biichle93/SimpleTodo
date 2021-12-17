@@ -37,6 +37,7 @@ class TaskItemAdapter(val listOfItems: List<String>,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
+
         val inflater = LayoutInflater.from(context)
         // Inflate the custom layout
         val contactView = inflater.inflate(android.R.layout.simple_list_item_1, parent, false)
