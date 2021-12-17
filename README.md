@@ -4,7 +4,7 @@
 
 Submitted by: **Michael Biichle**
 
-Time spent: **3** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
