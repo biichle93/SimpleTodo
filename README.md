@@ -16,7 +16,12 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+* [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo listThe following 
+
+The following **additional** features are implemented:
+
+* [x] Used toast widget to let the user know whether an action was successful or failed
+* [ ] Added cancel button to exit the edit activity if user changes mind
 
 ## Video Walkthrough
 
